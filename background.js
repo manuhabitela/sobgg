@@ -8,16 +8,17 @@ chrome.contextMenus.create({
 	}
 });
 
+const BGG_BASENAME = 'https://www.boardgamegeek.com';
+const API_ENDPOINT = 'https://www.boardgamegeek.com/xmlapi2';
+
 const gamePage = (id) =>
-	'https://www.boardgamegeek.com/boardgame/' + id;
+	`${BGG_BASENAME}/boardgame/${id}`;
 
 const searchPage = (terms) =>
-	'https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q=' + encodeURIComponent(terms);
+	`${BGG_BASENAME}/geeksearch.php?action=search&objecttype=boardgame&q=${encodeURIComponent(terms)}`;
 
 const searchApi = (terms) =>
-	'https://www.boardgamegeek.com/xmlapi2/search?query='
-	+ encodeURIComponent(terms)
-	+ '&type=boardgame,boardgameexpansion&exact=1';
+	`${API_ENDPOINT}/search?query=${encodeURIComponent(terms)}&type=boardgame,boardgameexpansion&exact=1`;
 
 const xmlStringToDocument = (string) => {
 	const parser = new DOMParser();
@@ -39,7 +40,7 @@ const search = (terms) => {
 		const xml = xmlStringToDocument(xmlString);
 		const itemsNumber = xml.querySelector('items').getAttribute('total') * 1;
 
-		let bggUrlToOpen = searchPage(terms)
+		let bggUrlToOpen = searchPage(terms);
 		if (itemsNumber === 1) {
 			bggUrlToOpen = gamePage(xml.querySelector('item[id]').getAttribute('id'));
 		}
