@@ -18,7 +18,7 @@ const searchPage = (terms) =>
 	`${BGG_BASENAME}/geeksearch.php?action=search&objecttype=boardgame&q=${encodeURIComponent(terms)}`;
 
 const searchApi = (terms) =>
-	`${API_ENDPOINT}/search?query=${encodeURIComponent(terms)}&type=boardgame,boardgameexpansion&exact=1`;
+	`${API_ENDPOINT}/search?query=${encodeURIComponent(terms)}&type=boardgame&exact=1`;
 
 const xmlStringToDocument = (string) => {
 	const parser = new DOMParser();
