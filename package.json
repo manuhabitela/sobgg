@@ -1,0 +1,25 @@
+{
+  "name": "sobgg",
+  "version": "1.0.0",
+  "description": "A tiny web extension (working on Chrome, Firefox, an certainly more) that adds a context menu entry to search the selected text on https://boardgamegeek.com. If a direct match is found, the extension opens the BGG game page in a new tab. If not, it opens a BGG search page with the selected text.",
+  "main": "src/background.js",
+  "devDependencies": {
+    "webextension-polyfill": "^0.7.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  },
+  "scripts": {
+    "start": "webpack --mode=development --watch",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leimi/sobgg.git"
+  },
+  "author": "Emmanuel Pelletier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leimi/sobgg/issues"
+  },
+  "homepage": "https://github.com/Leimi/sobgg#readme"
+}

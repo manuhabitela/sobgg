@@ -12,7 +12,7 @@
 		"128": "icon-square-128.png"
 	},
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": ["dist/see-on-bgg.js"]
 	},
 	"manifest_version": 2
 }
