@@ -6,6 +6,11 @@
 		"contextMenus",
 		"tabs"
 	],
+	"icons": {
+		"16": "icon-square-16.png",
+		"48": "icon-square-48.png",
+		"128": "icon-square-128.png"
+	},
 	"background": {
 		"scripts": ["background.js"]
 	},
