@@ -8,8 +8,9 @@ browser.contextMenus.create({
 	title: 'See on BoardGameGeek',
 	contexts: ['selection'],
 	onclick: function(info, tab) {
-		if (info.selectionText) {
-			seeOnBgg(info.selectionText.trim());
+		const text = info.selectionText && info.selectionText.trim();
+		if (text) {
+			seeOnBgg(text);
 		}
 	}
 });
