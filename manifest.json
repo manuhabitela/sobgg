@@ -1,6 +1,6 @@
 {
 	"name": "See On BoardGameGeek",
-	"version": "1.0",
+	"version": "1.0.0",
 	"description": "Select a board game name, quickly open its BGG page via the browser context menu",
 	"permissions": [
 		"contextMenus",
