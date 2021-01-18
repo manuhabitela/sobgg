@@ -6,5 +6,6 @@ A tiny web extension (working on Chrome, Firefox, an certainly more) that adds a
 
 <details>
     <summary>Gif example</summary>
-    ![Select a board game name in any website's content, right click, click "See On BoardGameGeek", voilà!](example.gif)
+
+![Select a board game name in any website's content, right click, click "See On BoardGameGeek", voilà!](/example.gif)
 </details>
